@@ -16,4 +16,6 @@ services:
       - OOKLA_EULA_GDPR=true
     volumes:
       - ./data:/config
+    ports:
+      - 8765:80
     restart: unless-stopped
