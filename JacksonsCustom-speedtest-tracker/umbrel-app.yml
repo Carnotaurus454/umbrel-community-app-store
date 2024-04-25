@@ -1,28 +1,29 @@
 manifestVersion: 1
-id: JacksonsCustom-speedtest-tracker
+id: jacksonscustom-speedtest-tracker
 name: Speedtest Tracker
 tagline: Monitor your internet connection speeds
 icon: https://play-lh.googleusercontent.com/6UhaYypbKc95K0xx6chbz8Vg6D71Bs_2ViDvN-ipuOfmaNcWU6CT49UZseeFYmUavkA
-category: Networking
+category: Monitoring
 version: "latest"
 port: 8765
-description: >-
+description: |
   Speedtest Tracker is a self-hosted internet speed tracking app. It runs speedtests
   periodically and graphs the results. Monitor your internet connection speeds over time
   and identify any issues or trends.
 developer: LinuxServer.io
 website: https://github.com/linuxserver/docker-speedtest-tracker
-submitter: Your Name
-submission: https://github.com/your-github-username/your-app-store-repo
+submitter: Jackson
+submission: https://github.com/Carnotaurus454/umbrel-community-app-store
 repo: https://github.com/linuxserver/docker-speedtest-tracker
 support: https://discord.gg/linuxserver
 gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
   - https://i.imgur.com/yyVG0Jb.jpeg
-releaseNotes: >-
+releaseNotes: |
   Add release notes for the Speedtest Tracker app here, if applicable.
 dependencies: []
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+torOnly: false
