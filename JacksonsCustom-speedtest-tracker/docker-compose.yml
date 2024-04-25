@@ -1,6 +1,11 @@
 version: "3.7"
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: speedtest-tracker_speedtest-tracker_1
+      APP_PORT: 8765
+
   speedtest-tracker:
     image: lscr.io/linuxserver/speedtest-tracker:latest
     container_name: speedtest-tracker
@@ -17,6 +22,4 @@ services:
       - DB_PASSWORD= #optional
     volumes:
       - ./data:/config
-    ports:
-      - 8765:80
     restart: unless-stopped
