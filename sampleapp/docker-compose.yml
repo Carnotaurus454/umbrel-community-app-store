@@ -1,14 +1,22 @@
 version: "3.7"
 
 services:
-
-  app_proxy:
+  speedtest-tracker:
+    image: lscr.io/linuxserver/speedtest-tracker:latest
+    container_name: speedtest-tracker
     environment:
-      # The format here is: <app-id>_<docker-service-name>_1
-      APP_HOST: sparkles-hello-world_server_1
-      APP_PORT: 3000
-    
-  server:
-    image: getumbrel/community-app-store-hello-world:latest
-    user: "1000:1000"
-    init: true
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - DB_CONNECTION=sqlite
+      - APP_KEY= #optional
+      - DB_HOST= #optional
+      - DB_PORT= #optional
+      - DB_DATABASE= #optional
+      - DB_USERNAME= #optional
+      - DB_PASSWORD= #optional
+    volumes:
+      - ./data:/config
+    ports:
+      - 8765:80
+    restart: unless-stopped
