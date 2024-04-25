@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: speedtest-tracker_speedtest-tracker_1
-      APP_PORT: 8765
+      APP_PORT: 80
 
   speedtest-tracker:
     image: lscr.io/linuxserver/speedtest-tracker:latest
@@ -13,13 +13,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
-      - DB_CONNECTION=sqlite
-      - APP_KEY= #optional
-      - DB_HOST= #optional
-      - DB_PORT= #optional
-      - DB_DATABASE= #optional
-      - DB_USERNAME= #optional
-      - DB_PASSWORD= #optional
+      - OOKLA_EULA_GDPR=true
     volumes:
       - ./data:/config
     restart: unless-stopped
