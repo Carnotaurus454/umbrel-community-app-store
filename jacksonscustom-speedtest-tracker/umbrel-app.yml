@@ -3,7 +3,7 @@ id: jacksonscustom-speedtest-tracker
 name: Speedtest Tracker
 tagline: Monitor your internet connection speeds
 icon: https://play-lh.googleusercontent.com/6UhaYypbKc95K0xx6chbz8Vg6D71Bs_2ViDvN-ipuOfmaNcWU6CT49UZseeFYmUavkA
-category: Monitoring
+category: Networking
 version: "latest"
 port: 8765
 description: |
